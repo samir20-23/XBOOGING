@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<link rel="stylesheet" href="css/SOSIAL.LOGIN.css">
+</head>
+<body>
+<div class="to">
+  <h2>Login</h2>
+  <form action="google.php" method="POST">
+    <div class="row">
+      <label>Email</label>
+      <input type="email" id="email" name="email" placeholder="email" required>
+    </div>
+    <div class="row">
+      <label>Password</label>
+      <input type="password" id="password" name="password" placeholder="password" required>
+    </div>
+    <div class="row">
+      <a href="#" class="forgot-password">Forgot Password?</a>
+      <input type="submit" id="submit" value="Submit">
+    </div>
+  </form>
+  <div class="or">OR</div>
+  <div class="socialLogin">
+    <a href="#" class="socialBtn facebook">
+      <img src="img/facebook.png" alt="Facebook Icon">
+      Login with Facebook
+    </a>
+    <a href="#" id="googlelink" class="socialBtn google">
+      <img src="img/google.png" alt="Google Icon">
+      Login with Google
+    </a>
+    <a href="#" class="socialBtn twitter">
+      <img src="img/twitter.jpg" alt="Twitter Icon">
+      Login with Twitter
+    </a>
+  </div>
+</div>
+<script>
+window.onload = function() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "google.php", true);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+            if (response.link) {
+                document.getElementById("googlelink").href = response.link;
+            } else {
+                document.getElementById("googlelink").innerHTML = "Google login unavailable";
+            }
+        }
+    };
+    xhttp.send();
+};
+</script>
+</body>
+</html>
