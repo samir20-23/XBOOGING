@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", sans-serif;
+    font-family: "Kanit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  :root {
+    /*colors */
+    --color1: #c2e8fd;
+    --color2: #ddd5d2;
+    --color3: #2b2323;
+    --color4: #916457;
+    --color5: #337abf;
+    --color6: #607c5d;
+    --color7: #7fd83a;
+    --color8: #663e35;
+    --color9: #d8bc3b;
+    --color10: #324977;
+    --color11: #ff0000;
+    --color12: blue;
+    --color13: #376efd;
+    --color14: #ffffff;
+    --color15: #ff6828;
+    --color16: #ff733753;
+    --color17: #000000;
+    --fontSizenav: 22px;
+    --fontSizelogo: 35px;
+    --fontSizelogomobile: 20px;
+    --gap: 80px;
+  }
+ footer{
+    width: 99%;
+    min-width: 290px;
+    background: var(--color17);
+    color: var(--color14);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ }
+ 
+#allcontentfooter{
+    width: 80%;
+}
+ 
+#contentfooter , #contactfooter{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#contactfooter{
+   width: 97%;
+   padding: 10px 0 0 40px;
+}
+ 
+#firsttextfooter , #midtextfooter , #lasttextfooter{
+text-align: center;
+display: flex;
+flex-direction: column;
+gap: 13px;
+}
+
+#firstcontact , #midcontact ,#lastcontact{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+    color: var(--color10);
+    text-shadow: 0 0 2px rgb(126, 126, 126);
+}
+
+footer img{
+    width: 30px;
+}
+#firsttextfooter span, #midtextfooter span {
+    color : rgb(119, 100, 136);
+    text-shadow: 0 0 1px rgb(255, 140, 0);
+    font-size: 23px;
+    }
+#lasttextfooter h1{
+        color : rgb(0, 0, 0);
+        text-shadow: 0 0 5px rgb(255, 140, 0);
+        }
+
+@media only screen and (max-width:537px){
+    #contentfooter , #contactfooter{
+        padding: 0 0 0 0;
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width:300px){
+    #contentfooter , #contactfooter{
+        padding: 0 0 0 0;
+        font-size: 11px;
+        gap: 9px; 
+    }
+}
+/* 
+ */
